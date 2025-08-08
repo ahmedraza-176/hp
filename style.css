@@ -1,0 +1,243 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px;
+    height: 15%;
+    /* background-color: plum; */
+    
+}
+.cointanier{
+    width: 100%;
+    height: 100vh;
+    background:linear-gradient(90deg,rgb(8,8,67),rgb(5,1,18),rgb(8,8,67))
+    
+}
+.parent{
+    width: 80%;
+    background-color: #230845;
+    height: 90%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50% , -50%);
+    color: white;
+    overflow: hidden;
+}
+nav h1{
+    font-size: 35px;
+    margin-left: 40px;
+    font-weight: 600;
+    color: #014728;
+    position: relative;
+    text-transform: uppercase;
+}
+ul{
+    display: flex;
+    list-style: none;
+    
+    
+}
+a{
+    text-decoration: none;
+    padding: 5px 20px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    transition: 0.5s ease ease;
+}
+nav h1::before{
+    
+        position:absolute;
+    width: 20px;
+    height: 20px;
+    content: "";
+    top: 50%;
+    left: -40%;
+    transform: translateY(-50%);
+    background: linear-gradient(90deg ,rgb(174, 0, 255),blue);
+}
+.main-content{
+    display: flex;
+    height: 85%;
+}
+ .left{
+    width: 50%;
+    height: 100%;
+    padding: 40px 80px;
+
+ }  
+ .left h3{
+    font-size: 25px;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-top: 40px;
+ }
+ .left h1{
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-weight: 600;
+    line-height: 60px;
+
+ }
+ span{
+    color: yellow;
+ }
+ .left p{
+    font-size: 12px;
+    font-weight: 400;
+
+
+ }
+ .left h2{
+    text-decoration: underline;
+    margin: 10px 0;
+        font-weight: 500;
+ }
+.left button{
+    padding: 7px 15px;
+    border: none;
+    outline: none;
+    letter-spacing: 1px ;
+    background-color: #033677;
+    color: white;
+    transition: 0.2s ease;
+    cursor: pointer;
+    margin: 20px 0;
+}
+button:hover{
+    background-color: rgb(42, 0, 93 );
+    box-shadow: 0 0 10px white; 
+}
+.right{
+   overflow: hidden;
+    padding-left: 100px;
+    width: 60%;
+    height: 100%;
+
+}
+#sub{
+    background-image: linear-gradient(90deg,#c04848,#480048,#c04848);
+    margin: 10px;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 10px 13px;
+    background-size: 200% auto;
+    border-radius: 20px;
+    transition: 0.5s ease;
+
+
+}
+#sub:hover{
+    background-position: right center;
+}
+.graident{
+    width: 360px;
+    height: 360px;
+    position: absolute  ;
+    top: 48%;
+    left: 56%;
+    border-radius: 50%;
+    background-color: rgb(158, 109, 255);
+    z-index: -1;
+    filter: blur(50px);
+    box-shadow: 0 0 250px rgb(157, 108, 255),0 0 200px purple,0 0 150px rgb(204, 0, 255);
+
+}
+a:hover{
+    text-decoration: underline;
+    color: blue;
+}
+/* responive */
+@media (max-width:992px) {
+    nav{
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+    }
+    nav h1{
+        margin-left: 0;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+    ul{
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .parent{
+        width: 95%;
+        height: 95%;
+
+    }
+    .left .right{
+        width: 100%;
+        padding: 30px;
+
+    }
+    .left h1{
+        font-size: 12px;
+        line-height: 40px;
+
+    }
+    .left h3{
+            font-size: 20px;
+
+    }
+    .graident{
+        top: 60%;
+        left: 50%;
+        width: 250px;
+        height: 250px;
+    }
+}
+/* mobile */
+@media (max-width: 600px) {
+    nav {
+        padding: 15px;
+    }
+
+    nav h1 {
+        font-size: 25px;
+    }
+
+    a {
+        padding: 5px 10px;
+        font-size: 12px;
+    }
+
+    .left {
+        padding: 20px;
+    }
+
+    .left h1 {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .left h3 {
+        font-size: 16px;
+    }
+
+    .left p {
+        font-size: 11px;
+    }
+
+    .gradient {
+        width: 180px;
+        height: 180px;
+        top: 70%;
+        left: 50%;
+    }
+
+    .right {
+        padding: 20px;
+    }
+}
